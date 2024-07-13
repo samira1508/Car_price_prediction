@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon" class="favicon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="static/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/myCustom.css">
+
+    <title>""</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-steering-fill"></i>
+                CarRentalPricePrediction
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#inputSection" class="nav__link ">Predict</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <!-- Togglar Button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <!--************* MAIN CODE ****************-->
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="shapeX shape__big"></div>
+            <div class="shapeX shape__small"></div>
+
+
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Choose Best Car For You 
+                    </h1>
+                    <h2 class="home__subtitle">
+                        At Lowest Price
+                    </h2>
+                    <h3 class="home__elec">
+                        <i class="ri-flashlight-fill"></i>
+                        BY Samira Korabu
+                    </h3>
+                </div>
+
+                <img src="static/img/home5.png" alt="" class="home__img">
+                <div class="home__car">
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-temp-cold-line"></i>
+                        </div>
+                        <h2 class="home__car-number">3.0s</h2>
+                        <h3 class="home__car-name">0-100 km/h</h3>
+
+                    </div>
+
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-dashboard-2-line"></i>
+                        </div>
+                        <h2 class="home__car-number">419</h2>
+                        <h3 class="home__car-name">POWER (KW)</h3>
+
+                    </div>
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-flashlight-fill"></i>
+                        </div>
+                        <h2 class="home__car-number">325 km/h</h2>
+                        <h3 class="home__car-name">MAX. SPEED</h3>
+
+                    </div>
+                    <a href="#inputSection"><button class="home__button">START</button></a>
+
+                </div>
+
+                
+               <!-- <div class="slider__bg">
+                <div class="slider__bg-navBtn active"></div>
+                <div class="slider__bg-navBtn"></div>
+                <div class="slider__bg-navBtn"></div>
+                <div class="slider__bg-navBtn"></div>
+                <div class="slider__bg-navBtn"></div>
+                
+                </div> -->
+
+
+
+            </div>
+            <div class="home__social">
+                <a href="#" class="home__social-icon"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="home__social-icon"><i class="ri-instagram-fill"></i></a>
+                <a href="#" class="home__social-icon"><i class="ri-twitter-fill"></i></a>
+
+            </div>
+         <!--==================== GALLERY BANNER ====================-->
+           
+            <div class="gallery__container container grid">
+                <video class="video__slide active" src="static/video/vid_1.mp4" autoplay muted loop></video>
+                <video class="video__slide" src="static/video/vid_4.mp4" autoplay muted loop></video>
+                <video class="video__slide" src="static/video/vid_3.mp4" autoplay muted loop></video>
+                <video class="video__slide" src="static/video/vid_2.mp4" autoplay muted loop></video>
+                <video class="video__slide" src="static/video/vid_5.mp4" autoplay muted loop></video>
+            
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Result Section -->
+    <style>
+
+        input[type=text], select {
+          width: 80%;
+          text-color:white;
+          background-color: black;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border-radius: 4px;
+          border-color: white;
+          font-weight: bolder;
+        }
+        
+        
+        input[type=submit] {
+          width: 80%;
+          background-color: white;
+          opacity: 0.7;
+          color:black;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          font-size:100;
+          font-weight: bolder;
+        }
+        
+        
+        input[type=submit]:hover {
+          background-color: white;
+          opacity: 0.9;
+        }
+        form{
+            border-radius: 10px;
+            padding-top: 5%;
+            font-weight: bolder;
+        }
+        div {
+         
+          border-radius: 5px;
+          margin-left: 35%;
+          width: 30%;
+          
+        }
+        h1{
+            color:color-blue;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        h3{
+          color: white;
+          font-size: 40px;
+          border-radius: 10px;
+          font-weight: bolder;
+          padding: 14px 20px;
+        }
+        
+        body {
+                    
+                    background-image: url("static/images/car.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    text-align: center;
+                    padding: 0px;
+                }
+               
+        </style>
+        
+        <body>
+        
+        <div id="inputSection"> 
+         
+         <form action="{{ url_for('predict')}}" method="post" style="background-color:transparent">
+          
+          
+          <label for="Seller_Type_Individual">Car Brand 🏎 </label><br>
+          <select id="Seller_Type_Individual" name="Seller_Type_Individual" required="required">
+            <option value="____">  </option>
+            <option value="1">BMW</option>
+            <option value="2">Mercedes-Benz</option>
+            <option value="3">Audi </option>
+            <option value="4">Toyota</option>
+            <option value="5">Renault‍</option>
+            <option value="6">Volkswagen</option>
+            <option value="7">Mitsubishi</option>
+        
+            </select><br>
+        
+        
+            <label for="Car_Model">Car Model 🔧 </label><br>
+          <select id="Car_Model" name="Car_Model" required="required">
+            <option value="____">  </option>
+            <option value="1">sedan</option>
+            <option value="2">van</option>
+            <option value="3">crossover </option>
+            <option value="4">vagon</option>
+            <option value="5">other</option>
+            <option value="6">hatch</option>
+            </select><br>
+        
+            <label for="Mileage">Mileage 🛣️</label><br>
+        <input type="text" id="Mileage" name="Mileage" placeholder="For example: 0 to 300 " required="required"><br>
+        
+        
+        
+            <label for="Fuel_Type_Petrol">Engine Type ⛽</label><br>
+            <select id="Fuel_Type_Petrol" name="Fuel_Type_Petrol" required="required">
+              <option value="____">  </option>
+              <option value="1">Petrol ⛽</option>
+              <option value="2">Diesel ⛽</option>
+              <option value="3">Gas ⛽</option>
+              <option value="4">Other ⛽</option>
+        
+        
+            </select><br>
+        
+        
+            <label for="Registration">Registration📝</label><br>
+        <select id="Registration" name ="Registration">
+              <option value="____">  </option>
+              <option value="1">Yes ✅</option>
+              <option value="2">No ❌</option>
+              
+            </select><br>
+        
+        <label for="Year">Year of Purchase 💰</label><br>
+        <input type="text" id="Year" name="Year" placeholder="For example: 2014/2015...." required="required"><br>
+        
+             
+        <div class="container z-50 mx-auto mt-12 bg-transparent-100 rounded-lg">
+            <div class="px-4 py-5 sm:px-6 w-full">
+                <p class="my-auto text-center">
+                    <a href="#resultSection"><button type="submit" value="predict" class="home__button">START</button></a>
+                </p>
+            </div>
+        </div>  
+    
+        </form>
+        </div>
+            
+        
+        <div id="resultSection" class="container mx-auto flex px-5 py-6 items-left justify-left flex-col border-b border-white">
+            <div class="text-center lg:w-2/3 w-full">
+                <h1 class=" text-left mb-4 h-auto py-2 px-4 text-base leading-relaxed bg-transparent rounded-lg">
+                    Predicted Car Price :<span class="text-red-500 font-semibold">Rs {{prediction_text}} Lakh</span></h1>
+            </div>
+
+        <!--==================== FEATURES ====================-->
+         
+         <!--==================== LOGOS ====================-->
+        
+        
+         <section class="logos section">
+            <div class="logos__container container grid">
+                <div class="logos__content">
+                    <img src="static/img/logo1.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="static/img/logo6.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="static/img/logo5.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="static/img/logo4.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="static/img/logo3.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="static/img/logo2.png" alt="" class="logos__img">
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+        
+
+    
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <span class="footer__copy">
+            &#169; <a target="_blank" href="" class="footer__dev-link">Samira Korabu</a> All rigths
+            reserved
+            <p id="date"></p>
+        </span>
+    </footer>
+
+
+    <!--========== SCROLL UP ==========-->
+
+    <a href="" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+   <!-- <script>
+        const one = document.getElementById('one')
+        const two = document.getElementById('two')
+        const three = document.getElementById('three')
+        const four = document.getElementById('four')
+        const five = document.getElementById('five')
+        const six = document.getElementById('six')
+        
+
+
+        var randomArray = ['277', '427', '358', '240', '120', '200', '193', '212', '177', '260', '165', '100', '250',
+        '84', '203',  '21',   '0', '132', '225', '130', '163', '151', '330', '171',  '65',   '1',
+        '72',  '87', '160', '147', '300',  '14', '230',  '86', '326',  '30', '181',  '80', '231',
+       '134', '335',  '66', '172', '317', '266', '265', '162',  '81', '253', '270', '245', '127',
+       '152', '267',  '214',  '83', '18', '150',  '103',  '57', '110', '226',]
+
+       var randomArray1 = ['2000','2001', '2002','2003', '2004','2005','2006']
+
+        function randomValue() {
+
+            one.value = getRndInteger(1, 7)
+            two.value = getRndInteger(1, 6)
+            three.value = randomItem(randomArray)
+
+            four.value = getRndInteger(1, 4)
+            five.value = getRndInteger(1, 2)
+
+            six.value = randomItem(randomArray1)
+            
+        }
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * ((max - 1) - min + 1)) + min;
+        }
+
+        function randomItem(items) {
+            return items[Math.floor(Math.random() * items.length)];
+          }
+    </script> -->
+
+    <!--=============== SCROLL REVEAL - PAGE ANNIMATION ===============-->
+    <script src="static/js/scrollrevealAnimation.min.js"></script>
+
+    <!--=============== SWIPER JS - PRODUCT SLIDER ===============-->
+    <script src="/ststic/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP JS - FILTER PRODUCT ===============-->
+    <script src="static/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="static/js/main.js"></script>
+
+
+
+
+
+
+    
+
+</body>
+
+
+
+</html>
